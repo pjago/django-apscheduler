@@ -1,8 +1,15 @@
 # Changelog
 
 This changelog is used to track all major changes to django-apscheduler.
+ 
+## v0.7.0(2024-09-24)
 
-## v0.6.3 (UNRELEASED)
+**Enhancements**
+- Drop support for Python 3.8 and Django 3.2.
+- Add support for Python 3.9 to 3.12, Django 4.2 to 5.1
+- Bump pytest to >7, remove pytest-pythonpath as it is no longer needed.
+- Add tox.ini file to run tests against all supported versions of Python and Django.
+- Update CI configuration to use tox.
 
 **Fixes**
 
