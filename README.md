@@ -1,11 +1,3 @@
-## WARNING: This project is no longer actively maintained.
-
-It has been a few years since I have worked on any Django applications in production, and I am not making use of this
-codebase myself anymore.
-
-We have an [issue open](https://github.com/jcass77/django-apscheduler/issues/190) to look for a new maintainer. Please
-comment there if you are interested in becoming involved.
-
 Django APScheduler
 ==================
 
