@@ -52,6 +52,12 @@ jobs:
         run: python -m pip install --upgrade codecov tox
       - name: Run tox targets for ${{ matrix.python-version }}
         run: tox run -f py$(echo ${{ matrix.python-version }} | tr -d . | cut -f 1 -d '-')
-      - name: Upload coverage
-        run: |
-          codecov -e TOXENV,DJANGO
+      -   name: Upload coverage reports to Codecov
+          uses: codecov/codecov-action@v3
+          with:
+            token: ${{ secrets.CODECOV_TOKEN }}
+            files: coverage.xml
+            flags: unittests
+            env_vars: TOXENV, PYTHON, DJANGO
+            fail_ci_if_error: true
+            verbose: true
